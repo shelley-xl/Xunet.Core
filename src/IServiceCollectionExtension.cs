@@ -1,6 +1,4 @@
-﻿using Swashbuckle.AspNetCore.SwaggerGen;
-
-namespace Microsoft.Extensions.DependencyInjection;
+﻿namespace Microsoft.Extensions.DependencyInjection;
 
 /// <summary>
 /// IServiceCollection扩展
@@ -213,18 +211,6 @@ public static class IServiceCollectionExtension
             x.SwaggerDoc("home", new OpenApiInfo
             {
                 Title = "API 接口服务",
-                Description = "接口说明",
-                Version = "v1",
-            });
-            x.SwaggerDoc("console", new OpenApiInfo
-            {
-                Title = "控制台",
-                Description = "接口说明",
-                Version = "v1",
-            });
-            x.SwaggerDoc("music", new OpenApiInfo
-            {
-                Title = "酷猫音乐",
                 Description = "接口说明",
                 Version = "v1",
             });

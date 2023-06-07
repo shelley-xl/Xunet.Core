@@ -8,9 +8,9 @@
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
 		<OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
 		<!-- version numbers will be updated by build -->
-		<AssemblyVersion>1.0.0.100</AssemblyVersion>
+		<AssemblyVersion>1.0.1.108</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
-		<Version>1.0.0</Version>
+		<Version>1.0.1</Version>
 		<VersionPrefix></VersionPrefix>
 		<VersionSuffix></VersionSuffix>
 		<Authors>徐来</Authors>

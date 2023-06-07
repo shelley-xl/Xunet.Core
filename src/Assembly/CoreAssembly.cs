@@ -43,6 +43,7 @@ global using Microsoft.Net.Http.Headers;
 global using Microsoft.AspNetCore.Mvc.Controllers;
 global using Xunet.Core.Logs;
 global using FluentScheduler;
+global using Swashbuckle.AspNetCore.SwaggerGen;
 
 namespace Xunet.Core;
 

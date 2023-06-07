@@ -99,8 +99,6 @@ public static class IApplicationBuilderExtension
             x.ShowExtensions();
             x.EnableValidator();
             x.SwaggerEndpoint("/swagger/home/swagger.json", "首页");
-            x.SwaggerEndpoint("/swagger/console/swagger.json", "控制台");
-            x.SwaggerEndpoint("/swagger/music/swagger.json", "酷猫音乐");
         });
         return app;
     }
