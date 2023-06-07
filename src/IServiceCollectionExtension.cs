@@ -287,27 +287,4 @@ public static class IServiceCollectionExtension
         return services;
     }
     #endregion
-
-    #region 添加OSS歌词文件访问HttpClientFactory
-    /// <summary>
-    /// 添加OSS歌词文件访问HttpClientFactory
-    /// </summary>
-    /// <param name="services"></param>
-    /// <returns></returns>
-    public static IServiceCollection AddOssReferer(this IServiceCollection services)
-    {
-        if (services.HasRegistered(nameof(AddOssReferer))) return services;
-
-        //添加OSS歌词文件访问HttpClientFactory
-        services.AddHttpClient("oss", x =>
-        {
-            var ossRefererUrl = services.BuildServiceProvider().GetRequiredService<IConfiguration>().GetSection("AliyunConfig:OssReferer").Get<string>();
-            if (string.IsNullOrEmpty(ossRefererUrl)) return;
-            x.DefaultRequestHeaders.Add("Referer", ossRefererUrl);
-            x.DefaultRequestHeaders.Add("Cache-Control", "no-cache");
-        });
-
-        return services;
-    }
-    #endregion
 }
