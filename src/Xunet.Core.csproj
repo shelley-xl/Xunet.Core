@@ -1,0 +1,82 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net6.0;net7.0</TargetFrameworks>
+		<LangVersion>10.0</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<OpenApiGenerateDocuments>false</OpenApiGenerateDocuments>
+		<!-- version numbers will be updated by build -->
+		<AssemblyVersion>1.0.0.100</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<Version>1.0.0</Version>
+		<VersionPrefix></VersionPrefix>
+		<VersionSuffix></VersionSuffix>
+		<Authors>徐来</Authors>
+		<Company>徐来</Company>
+		<Title>Xunet.Core</Title>
+		<Product>Xunet.NET</Product>
+		<Description>Xunet.Core is a general purpose middleware library for .NET Core,contains some middleware,which is used to simplify webapi development.</Description>
+		<Summary>Xunet.Core is a general purpose middleware library for .NET Core</Summary>
+		<Copyright>Copyright © 徐来 Xulai 2023</Copyright>
+		<RootNamespace>Xunet.Core</RootNamespace>
+		<AssemblyName>Xunet.Core</AssemblyName>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<RepositoryType>git</RepositoryType>
+		<RepositoryUrl>https://github.com/shelley-xl/Xunet.Core</RepositoryUrl>
+		<PackageId>Xunet.Core</PackageId>
+		<PackageTags>middleware,webapi</PackageTags>
+		<PackageIcon>logo.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<PackageLicenseFile>LICENSE</PackageLicenseFile>
+		<PackageProjectUrl>https://github.com/shelley-xl/Xunet.Core</PackageProjectUrl>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+		<OutputPath>..\build\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Content Include="Configs\nlog.config">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+			<CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Xunet" Version="1.0.7" />
+		<PackageReference Include="FluentScheduler" Version="5.5.1" />
+		<PackageReference Include="MiniProfiler.AspNetCore" Version="4.2.22" />
+		<PackageReference Include="FluentValidation.AspNetCore" Version="11.2.2" />
+		<PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+		<PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="6.5.0" />
+		<PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="5.7.0" />
+		<PackageReference Include="NLog.Web.AspNetCore" Version="4.13.0" />
+		<PackageReference Include="NLog" Version="4.7.10" />
+		<PackageReference Include="Autofac" Version="6.2.0" />
+		<PackageReference Include="Autofac.Extensions.DependencyInjection" Version="7.1.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.8" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.6" />
+		<PackageReference Include="MySql.Data" Version="8.0.26" />
+		<PackageReference Include="Aliyun.OSS.SDK.NetCore" Version="2.13.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\LICENSE">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\logo.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+		<None Include="..\README.md">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
+
+</Project>
